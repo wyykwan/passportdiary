@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <h1>so, where have you been?</h1>
+        <p><a class="btn btn-primary btn-large" href="/entries/new">add new destination</a></p>
+    </header>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>my collection</h3>
+        </div>
+    </div>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% entries.forEach(function(entry){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%= entry.image %> ">
+                <div class="caption"><h4><%= entry.name %></h4></div>
+                <p><a href="/entries/<%= entry._id %>" class="btn btn-primary">more</a></p>
+            </div>
+        </div>
+        <%});%>
+    </div>
+</div>
+
+<% include ../partials/footer %>

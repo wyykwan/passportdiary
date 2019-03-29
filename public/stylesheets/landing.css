@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+#landing-header {
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#landing-header h1 {
+    color: white;
+}
